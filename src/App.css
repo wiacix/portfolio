@@ -1,0 +1,41 @@
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#Language_picker{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+}
+#Language_picker:hover{
+    cursor: pointer;
+}
+#Language_picker img{
+    width: 35px;
+    border-radius: 5px;
+}
+
+#img_pl{
+    position: absolute;
+    left: 5px;
+}
+#img_en{
+    position: absolute;
+    right: 5px;
+}
+#selector{
+    position: absolute;
+    z-index: -1;
+    height: 40px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 20px;
+    transition: 0.2s;
+}

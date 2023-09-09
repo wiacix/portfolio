@@ -1,0 +1,39 @@
+#aboutme{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutme h2{
+    color: white;
+    font-size: 150%;
+    font-family:'Franklin Gothic Medium', sans-serif;
+    margin-left: 10px;
+    text-align: justify;
+}
+
+#aboutme img{
+    border-radius: 50%;
+    width: 20%;
+}
+
+@media only screen and (max-width: 1000px) {
+    #aboutme img{
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #aboutme img{
+        width: 50%;
+    }
+    #aboutme{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 450px) {
+    #aboutme img{
+        width: 70%;
+    }
+}
