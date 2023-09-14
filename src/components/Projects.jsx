@@ -5,6 +5,7 @@ import magnifier from '../IMG/magnifier.png'
 import $ from 'jquery'
 import { useState } from 'react';
 import Gallery from './Gallery';
+import lastSingleLetterToNewLine from '../scripts/LetterToNewLine';
 
 function Projects(props) {
   let [whatGalleryVisible, setwhatGalleryVisible] = useState(projects_img);
@@ -44,7 +45,7 @@ function Projects(props) {
                   )
                 })}
               </div>
-              <h4>{text[proj.id_description][props.lang]}</h4>
+              <h4>{lastSingleLetterToNewLine(text[proj.id_description][props.lang])}</h4>
               <a href={proj.git} target='_blank' title={text[9][props.lang]} rel='noreferrer'><img src={require('../IMG/github.png')} alt={text[9][props.lang]}></img></a>
             </div>
           )

@@ -12,6 +12,7 @@
     font-family:'Franklin Gothic Medium', sans-serif;
     margin-left: 10px;
     text-align: justify;
+    width: 50%;
 }
 
 #aboutme img{
@@ -30,6 +31,12 @@
     }
     #aboutme{
         flex-direction: column;
+        height: auto;
+    }
+    #aboutme h2{
+        margin-top: 10px;
+        width: 95%;
+        font-size: 130%;
     }
 }
 @media only screen and (max-width: 450px) {

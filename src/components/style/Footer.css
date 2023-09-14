@@ -1,21 +1,65 @@
 #footer{
-    background-color: rgba(0, 46, 114, 0.76);
+    position: absolute;
+    top: 40px;
+    width: 25px;
+    right: 0;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', sans-serif;
+    display: flex;
+    align-items: flex-start;
+    transition: 0.5s;
+}
+#ShowContact{
+    width: 16px;
     height: auto;
-    padding: 7px 0 7px 0;
-    width: 100vw;
+    font-size:15px;
+    padding: 4px 7px;
+    background-color: rgba(0, 0, 0, 0.61);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px 0 0 10px;
+}
+#footer > a > img{
+    height: 29px;
+}
+#Contact{
+    width: 244px;
+    height: auto;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.61);
+    color: white;
+    border-radius: 0 0 0 10px;
+    text-align: center;
+    display: none;
+}
+#Contact > hr{
+    width: 75%;
+    margin: 3px auto 0 auto;
+}
+#Contact > p, #Contact a{
+    margin-top: 5px;
+    color: white;
+    font-weight: 600;
+}
+#Contact > h3{
+    margin-top: 7px;
+    font-size: 130%;
+}
+#Contact > h4{
+    margin-top: 10px;
+    font-size: 115%;
+}
+#Contact_a{
+    width: auto;
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: white;
+    justify-content: space-around;
 }
-#footer a{
-    color: white;
+#Contact_a a{
+    width: 25%;
 }
-#footer_box{
-    margin-left: 5px;
-    display: flex;
-    flex-direction: column;
-}
-.a_first{
-    margin-bottom: 7px;
+#Contact_a img{
+    width: 100%;
 }

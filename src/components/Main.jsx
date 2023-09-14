@@ -1,7 +1,6 @@
 import './style/Main.css';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
-import Footer from './Footer';
 import Experience from './Experience';
 import Certificates from './Certificates';
 
@@ -14,7 +13,6 @@ function Main(props) {
           <Experience lang={props.lang}/>
           <Certificates lang={props.lang}/>
         </div>
-        <Footer />
     </div>
   );
 }

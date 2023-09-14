@@ -1,6 +1,7 @@
 import './style/Gallery.css';
 import { projects_img } from '../data/Projects';
 import { useRef, useState } from 'react';
+import lastSingleLetterToNewLine from '../scripts/LetterToNewLine';
 
 
 function Gallery(props) {
@@ -40,7 +41,7 @@ function Gallery(props) {
                         <img src={require('../IMG/'+projects_img[props.project_img]['img'][whichIMG])} alt='obraz' />
                         <button className='changIMG_BTN' style={{marginLeft: '-50px'}} onClick={() => nextIMG('+')}>&gt;</button>
                     </div>
-                    <div id='describeImage'><h3>{projects_img[props.project_img]['describeIMG_'+props.lang][whichIMG]}</h3></div>
+                    <div id='describeImage'><h3>{lastSingleLetterToNewLine(projects_img[props.project_img]['describeIMG_'+props.lang][whichIMG])}</h3></div>
                     <div id='AllIMG'>
                         {projects_img[props.project_img]['img'].map((img, index) =>{
                             return (

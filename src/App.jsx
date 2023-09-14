@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import Start from './components/Start';
 import Main from './components/Main';
+import Footer from './components/Footer';
 import $ from 'jquery';
 import pl from './IMG/pl.png';
 import en from './IMG/gb.png';
@@ -11,12 +12,13 @@ function App() {
   const [isStartVisible, setisStartVisible] = useState(true);
   const [isMainVisible, setisMainVisible] = useState(false);
   const [isButtonVisible, setisButtonVisible] = useState(false);
+  const [isFooterVisible, setisFooterVisible] = useState(false);
   const lang_cookies = (Cookies.get('lang') ? Cookies.get('lang') : 'en');
   const [whatLanguage, setwhatLanguage] = useState(lang_cookies);
   const LangPickerRef = useRef(null);
   const [elementStyle, setelementStyle] = useState(null);
   const [pageLoad, setpageLoad] = useState(false);
-  const intro_time = 120; //12000
+  const intro_time = 12000; //12000
 
   useEffect(() => {
     if(whatLanguage==='pl'){
@@ -37,6 +39,7 @@ function App() {
     setTimeout(() => {
       setisStartVisible(false);
       setisButtonVisible(true);
+      setisFooterVisible(true);
       $('body').css({'overflow-y': 'scroll'});
     }, 1500);
   }, intro_time);
@@ -64,6 +67,7 @@ function App() {
   return (
     <>
       {isButtonVisible ? <div id={'Language_picker'} onClick={() => change_lang()} ><img src={pl} alt='pl' id='img_pl'/><div id='selector' ref={LangPickerRef} style={!pageLoad ? elementStyle : null}></div><img src={en} alt='en' id='img_en'/></div> : null}
+      {isFooterVisible? <Footer lang={whatLanguage} /> : null}
       {isStartVisible ? <Start lang={whatLanguage} /> : null}
       {isMainVisible ? <Main lang={whatLanguage} /> : null}
     </>

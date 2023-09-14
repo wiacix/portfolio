@@ -1,6 +1,7 @@
 import './style/Slidebar.css';
 import { text } from '../data/Dictionary'
 import { experience } from '../data/Experience';
+import lastSingleLetterToNewLine from '../scripts/LetterToNewLine';
 
 function Experience(props) {
   return (
@@ -21,7 +22,7 @@ function Experience(props) {
                   )
                 })}
               </ul>
-              <h3>{text[exp.id_describe][props.lang]}</h3>
+              <h3>{lastSingleLetterToNewLine(text[exp.id_describe][props.lang])}</h3>
             </div>
           )
         })}
